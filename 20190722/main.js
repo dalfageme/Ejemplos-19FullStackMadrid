@@ -81,4 +81,16 @@ var tablaMultiplicar = [
   [6, 2, 12],
 ];
 
+console.log('Tipo del array', typeof tablaMultiplicar);
 console.log('2 * 5:', tablaMultiplicar[5][2])
+
+// Dates
+var cumpleanyos = new Date(2019, 4, 6);
+var cumpleanyos2 = new Date("2001/9/28"); //28 septiembre 2001
+console.log(cumpleanyos2);
+console.log('Año:', cumpleanyos2.getFullYear());
+console.log('Mes:', cumpleanyos2.getMonth());
+
+var meses = ['E', 'F', 'M', 'A', 'MY', 'J', 'JL', 'AG', 'S', 'O', 'N', 'D'];
+console.log('Mes:', meses[cumpleanyos2.getMonth()]);
+console.log('Mes:', cumpleanyos2.toLocaleString('default', { month: 'long' }) );
