@@ -94,3 +94,64 @@ console.log('Mes:', cumpleanyos2.getMonth());
 var meses = ['E', 'F', 'M', 'A', 'MY', 'J', 'JL', 'AG', 'S', 'O', 'N', 'D'];
 console.log('Mes:', meses[cumpleanyos2.getMonth()]);
 console.log('Mes:', cumpleanyos2.toLocaleString('default', { month: 'long' }) );
+
+
+// Variables
+var a = 2;
+var b = a + 1;
+//Comentado para que no pida valors todo el rato
+// var c = parseInt(prompt('Dame un numero'));
+// var sumando1 = +prompt('Dame un numero');
+// var sumando2 = +prompt('Dame otro numero');
+// var resultado = sumando1 + sumando2;
+// console.log(sumando1 + ' + ' +  sumando2 +  ' = ' +  resultado );
+
+// console.log('a:',a);
+// console.log('b:',b);
+
+// Operadores
+console.log(2 * 3); // 6
+console.log(5 / 2); // 2.5
+console.log(parseInt(2.999)); // 2
+console.log(Math.round(2.999)); // 3
+console.log(5 % 2); // 1 (resto) 
+console.log(2 ** 3) // 8
+
+var numeroAIncrementar = 0;
+console.log(numeroAIncrementar);
+numeroAIncrementar = numeroAIncrementar + 1; //vale 1
+numeroAIncrementar += 1; // vale 2
+console.log(++numeroAIncrementar); // imprime 3
+console.log(numeroAIncrementar); // 3
+numeroAIncrementar--;
+console.log(numeroAIncrementar); // 2
+
+var mes = 0;
+console.log(mes + 1);
+console.log(mes);
+
+//Operadores de comparacion
+console.log( 1 == 1); // true
+console.log( 1 === 1); // true
+console.log( 1 == "1"); // true
+console.log( 1 === "1"); // false
+console.log( 1 === +"1"); // true
+
+// Ternario
+var edad = 17;
+var respuesta = edad >= 18 ? 'Puedes entrar' : 'No puedes';
+console.log(edad >= 18 ? 'Puedes entrar' :'No puedes');
+edad = edad > 18 ? edad  : edad + 10; 
+console.log(respuesta);
+
+// Operadores logicos
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && false); // false
+
+console.log(true || true); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+console.log(!false); // true
+console.log(!true); // false
