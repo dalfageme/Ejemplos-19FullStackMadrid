@@ -1,6 +1,9 @@
 console.log('Estructuras de control');
 
 var edad = 18;
+var nombre;
+
+
 
 if ( edad >= 18 ) {
   console.log('Puedes entrar');
@@ -61,7 +64,31 @@ for( var b = 0; b < 10 ; b++){
   console.log('for', b);
 }
 
-var compra = ['leche', 'galletas', 'huevos'];
+var compra = ['leche', 'galvaras', 'huevos'];
 for(var j = 0; j < compra.length; j++){
   console.log(compra[j]);
+}
+
+var ladoCubo = [
+  [ 'R', 'A', 'B'], // R - A - B
+  [ 'V', 'N', 'B'], // V - N - B
+  [ 'R', 'N', 'V'] // R - N -V
+];
+
+for (var row = 0; row < ladoCubo.length; row++) {
+  const filaCubo = ladoCubo[row];
+  var filaImprimir = "";
+  for (var column = 0; column < filaCubo.length; column++) {
+    filaImprimir += ladoCubo[row][column] 
+      + (column === filaCubo.length -1 ? "" :" - ");
+  }
+  console.log(filaImprimir);
+}
+
+for(var i = 5; i > 0; i--){
+  var filaImprimir = "";
+  for(var j = 0; j < i; j++){
+    filaImprimir += '0';
+  }
+  console.log(filaImprimir);
 }

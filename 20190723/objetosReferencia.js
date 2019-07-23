@@ -14,8 +14,8 @@ var persona = {
 };
 persona.nombre = 'David Alfageme';
 
-// var persona2 = Object.assign({}, persona);
-var persona2 = {...persona};
+var persona2 = Object.assign({}, persona);
+// var persona2 = {...persona};
 persona2.nombre = 'Laura';
 
 console.log(persona)

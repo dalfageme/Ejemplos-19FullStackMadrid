@@ -4,7 +4,6 @@
   Funciona en varias lineas
 */
 console.log('Hola mundo desde el main.js');
-
 //STRINGS
 console.log('Hola mi nombre es: \n \'David\'😀');
 
