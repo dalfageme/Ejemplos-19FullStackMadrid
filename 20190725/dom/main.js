@@ -1,36 +1,29 @@
+var compra = ["leche", "galletas", "huevos"];
+
 window.addEventListener('load', () => {
-  mostrarElementos();
-  addElements();
+  printElements();
+  // Obtenemos el boton
+  var addButton = document.getElementById('addButton');
+  // le añadimos el esuchador de eventos
+  addButton.addEventListener('click', addItem);
 });
 
+// Añadir el contenido del input a la lista
+function addItem(){
+  let productInput = document.querySelector('#productInput');
+  let productName = productInput.value; // Obtiene el texto del input
+  compra.push(productName); // añade a la lista de la compra
+  printElements(); // vuelve a dibujar los productos
+}
 
-function addElements(){
+
+// Se encarga de imprimir los productos
+function printElements(){
   var lista = document.getElementById('lista');
-  var compra = ["leche", "galletas", "huevos"];
-  // opcion 1
-  // for (let i = 0; i < compra.length; i++) {
-  //   lista.innerHTML = lista.innerHTML +  "<li>" + compra[i] + "</li>";
-  // }
-  // opcion 2
-  // var elementos = compra.map((p) => "<li>" + p + "</li>").join("");
-  // lista.innerHTML = elementos;
-  // OPCION 3
+  lista.innerHTML = ""; // borra todo lo que habia antes
   compra.forEach(function(producto){
     var liElement = document.createElement('li');
     liElement.innerText = producto;
-    lista.appendChild(liElement);
+    lista.appendChild(liElement); // añade el elemento al final de la lista
   })
-  console.log(lista);
-}
-
-function mostrarElementos(){
-  var elementoTitulo = document.getElementsByTagName('h1')[0];
-  // elementoTitulo.
-  elementoTitulo.innerText = 'David Alfageme';
-
-  var conClase = document.getElementsByClassName('conClase')[0];
-  console.log(conClase.innerText);
-
-  var porId = document.getElementById('conId');
-  console.log(porId.innerText);
 }
