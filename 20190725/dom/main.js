@@ -9,9 +9,6 @@ window.addEventListener('load', () => {
 
   var searchButton = document.querySelector('#searchButton');
   searchButton.addEventListener('click', search);
-
-  var deleteButton = document.querySelector('#deleteButton');
-  deleteButton.addEventListener('click', deleteItem);
 });
 
 // Añadir el contenido del input a la lista
@@ -31,6 +28,12 @@ function printElements(elementsToPrint = compra) {
   elementsToPrint.forEach(function (producto) {
     var liElement = document.createElement('li');
     liElement.innerText = producto;
+    var deleteButton = document.createElement('button');
+    deleteButton.id = producto;
+    deleteButton.addEventListener('click', deleteItem);
+    deleteButton.innerText = "🗑️";
+    liElement.prepend(deleteButton);
+
     lista.appendChild(liElement); // añade el elemento al final de la lista
   })
 }
@@ -48,9 +51,10 @@ function search() {
 }
 
 
-function deleteItem(){
-  var deleteInput = document.querySelector("#deleteInput");
-  var deleteText = deleteInput.value;
+function deleteItem(event){
+
+  console.log(event.target.id);
+  var deleteText = event.target.id;
 
   // array findIndex
   var indiceBorrar = compra.findIndex(function(producto){
@@ -58,7 +62,9 @@ function deleteItem(){
   });
 
   // splice 
-  compra.splice(indiceBorrar, 1);
+  if(indiceBorrar >= 0){
+    compra.splice(indiceBorrar, 1);
+  }
 
   // compra = compra.filter(function(producto) {
   //   return !producto.toLowerCase().includes(deleteText.toLowerCase());
